@@ -49,26 +49,6 @@ local-hostname: virt-ubuntu
 
 ### Step 4
 
-Generate a `seed.img` file from `user-data` and `meta-data` using `genisoimage` from `cdrtools`.
-
-> Note: This `seed.img` is the image file used by `qemu` to add your `user-data` into the guest OS. Whenever `user-data` is modified, this must be regenerated.
-
-```bash
-genisoimage -output seed.img -volid cidata -joliet -rock user-data meta-data
-```
-
-### Step 5
-
-Create a new image which is backed up by `cloud.img`. We will name it `boot-disk.img`.
-
-> Note: If you change your `user-data`, you must regenerate `boot-disk.img`. The config in `boot-disk.img` is reloaded only when the `instance-id` in `meta-data` is changed, so your `user-data` changes will not be reflected in the same `boot-disk.img` file.
-
-```bash
-qemu-img create -f qcow2 -b cloud.img boot-disk.img
-```
-
-### Step 6
-
 Run `script.sh`. This will automatically add your SSH key and other data from `user-data` to the image.
 
 ```bash
