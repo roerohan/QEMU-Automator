@@ -5,6 +5,7 @@ Spawn virtual machines with pre-configured data files.
 # Requirements
 
 - qemu
+- kvm
 - cdrtools (or genisoimage)
 - cloud image - [sample](https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.img)
 
