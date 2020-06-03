@@ -1,12 +1,9 @@
 # cloud-config
 
 users:
-  - default
   - name: roerohan
-    plain_test_passwd: 'test123'
-    gecos: Rohan Mukherjee
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCal7SgUCiCL0oBMnuFMp/x/zYV/T1NDCYskY1A8f9vrbOg+p6jqYnuj1zM3Pgc/1/cOcW6l6c3bZb3ko1hraxz9nNC7jJPSYvc/0ZAUTa9oLTaifZdeFCwTNhi5Z23EuIH+mhpO3OSRehClMYgAvBgL/CnMkJZd6EBvTtGDho4IIo62miK/HcN4uP7sP8WoVPRjkj3QELENfR0U9YwQRlK430VCfTYKgJB2Q/YxJk3VtdPWWRXGXl9fQTQNwlULzCU5bc/dyhdWPj1IrzLTB/wsFP43PZP/SegSIxAuK/13LN+Vs3Ca+50fm/V9OCzZnFqsAM/cHRcxg12t7eDx2dUOD5vikibgfCnbhADZy1pGGSM1BS6mLoPK5hk1Fz0oh2RAbeWMA+vz+wDbudK+paN7DnCTLIylJkEZJV/edfZhqoO6HI3wYapEXOuEGGC/N91dcgMJUHfABVWLWbUAyJGk2MKztbNc7pQOLKhwPaulPh2nji6yGcZh0RmDomHNEk= roerohan@anarchy
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC7rB2mKS77/Cn6sCDig8YHif51mtBJkwcabtVP3iXzqx2HqsyLbxBBWXSlNCGdRSPIgWwtQv4qKnVRq8C2+DZip/lfmQ1moVbm4basEA6aPWQVclcwUXWE+sgjRb/JIpIUHCj0y++GA4TDeGO7ANH5JSLzRfNHgJ8pfPrOiE+H8/FdABstvgN+7i3LdbqFywJQFHf7ui0KZFBpJP62nE+DH0ky8a/YfR5x6+47jb7pUqeQD2sw1Xr2f2NlcXzQivB9XKnhXhZZ4KY74ia3aRPJH/pPNToiiE82E+W9FdAPXWmQKx05NLhgbqeFPW7ravs4zLzVr5EIf1B6oqObwpBCE4/izXxMrYrWurne2rg7+Em+/UcSbx3k066mXVLzLZay/C7tAUSep9IyAPPWMn65RdWSw8mishFfuUwRQscgKuBQJgAq9/HS/7CL3EBWSmvMtTCYhVyHT7JRqTl4Xxe74pKxE0P+1sNE0iq0Vw/sQYhGgmhy8MFWkoxHJb/il+E= roerohan@anarchy
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     groups: sudo
     shell: /bin/bash

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+rm seed.img boot-disk.img
+
+genisoimage -output seed.img -volid cidata -joliet -rock user-data meta-data 
+
+qemu-img create -f qcow2 -b cloud.img boot-disk.img
+
 set -eux
 # Run the installed image
 
