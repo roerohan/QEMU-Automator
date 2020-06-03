@@ -1,7 +1,9 @@
 # cloud-config
 
 users:
+  - default
   - name: roerohan
+    plain_test_passwd: 'test123'
     gecos: Rohan Mukherjee
     ssh-authorized-keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCal7SgUCiCL0oBMnuFMp/x/zYV/T1NDCYskY1A8f9vrbOg+p6jqYnuj1zM3Pgc/1/cOcW6l6c3bZb3ko1hraxz9nNC7jJPSYvc/0ZAUTa9oLTaifZdeFCwTNhi5Z23EuIH+mhpO3OSRehClMYgAvBgL/CnMkJZd6EBvTtGDho4IIo62miK/HcN4uP7sP8WoVPRjkj3QELENfR0U9YwQRlK430VCfTYKgJB2Q/YxJk3VtdPWWRXGXl9fQTQNwlULzCU5bc/dyhdWPj1IrzLTB/wsFP43PZP/SegSIxAuK/13LN+Vs3Ca+50fm/V9OCzZnFqsAM/cHRcxg12t7eDx2dUOD5vikibgfCnbhADZy1pGGSM1BS6mLoPK5hk1Fz0oh2RAbeWMA+vz+wDbudK+paN7DnCTLIylJkEZJV/edfZhqoO6HI3wYapEXOuEGGC/N91dcgMJUHfABVWLWbUAyJGk2MKztbNc7pQOLKhwPaulPh2nji6yGcZh0RmDomHNEk= roerohan@anarchy
