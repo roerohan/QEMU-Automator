@@ -1,0 +1,19 @@
+{
+  "name": "qemu-automator",
+  "version": "1.0.0",
+  "description": "Spawn virtual machines with pre-configured data files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roerohan/QEMU-Automator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roerohan/QEMU-Automator/issues"
+  },
+  "homepage": "https://github.com/roerohan/QEMU-Automator#readme"
+}
