@@ -1,17 +1,19 @@
 # QEMU-Automator
 
-Spawn virtual machines with pre-configured data files.
+Spawn virtual machines with pre-configured data files. <br><br>
+Repository for the project component of the course CSE4011 (Virtualization), maintained by [Shantanu Verma](https://github.com/SaurusXI), [Rohan Mukherjee](https://github.com/roerohan), and Bhavya Taneja. <br>
+The tools created herein are motivated by a literature survey we performed on this subject.
 
-# Requirements
+## Requirements
 
 - qemu
 - kvm
 - cdrtools (or genisoimage)
 - cloud image - [sample](https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.img)
 
-# Steps
+## Usage
 
-## Step 1
+### Step 1
 
 Store the cloud-image in the root directory. For the purpose of simplicity, we will refer to it as `cloud.img`.
 
@@ -19,7 +21,7 @@ Store the cloud-image in the root directory. For the purpose of simplicity, we w
 wget -O cloud.img https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64.img
 ```
 
-## Step 2
+### Step 2
 
 Edit the `user-data` according to your requirements. It is in `yaml` format.
 
@@ -36,7 +38,7 @@ users:
     shell: /bin/bash
 ```
 
-## Step 3
+### Step 3
 
 Edit the `meta-data` file, if necessary. This is also in `yaml` format.
 
@@ -45,7 +47,7 @@ instance-id: id-12345
 local-hostname: virt-ubuntu
 ```
 
-## Step 4
+### Step 4
 
 Generate a `seed.img` file from `user-data` and `meta-data` using `genisoimage` from `cdrtools`.
 
@@ -55,7 +57,7 @@ Generate a `seed.img` file from `user-data` and `meta-data` using `genisoimage` 
 genisoimage -output seed.img -volid cidata -joliet -rock user-data meta-data
 ```
 
-## Step 5
+### Step 5
 
 Create a new image which is backed up by `cloud.img`. We will name it `boot-disk.img`.
 
@@ -65,7 +67,7 @@ Create a new image which is backed up by `cloud.img`. We will name it `boot-disk
 qemu-img create -f qcow2 -b cloud.img boot-disk.img
 ```
 
-## Step 6
+### Step 6
 
 Run `script.sh`. This will automatically add your SSH key and other data from `user-data` to the image.
 
@@ -75,6 +77,6 @@ Run `script.sh`. This will automatically add your SSH key and other data from `u
 
 You will now be able to SSH into the ubuntu server, with the username and private key corresponding to the entered public key.
 
-# License
+## License
 
 [MIT License](./LICENSE)
