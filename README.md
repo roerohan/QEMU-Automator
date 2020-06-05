@@ -60,3 +60,8 @@ You will now be able to SSH into the ubuntu server, with the username and privat
 ## License
 
 [MIT License](./LICENSE)
+
+# References
+
+You can checkout your user-data configuration here:
+- https://cloudinit.readthedocs.io/en/latest/topics/examples.html
